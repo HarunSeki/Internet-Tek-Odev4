@@ -1,0 +1,25 @@
+<section class="page-section bg-light" id="speakers">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Konuşmacılar Listesi</h2><br>
+        </div>
+        <div class="row">
+            {% for speaker in site.data.speakers %}
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="portfolio-item">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="/img/{{ speaker.id }}.jpeg" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">{{ speaker.name }}</div>
+                        <div class="portfolio-caption-subheading text-muted">{{ speaker.position }}</div>
+                        <div class="portfolio-caption-subheading text-muted">{{ speaker.company }}</div>
+                    </div>
+                </div>
+            </div>            
+            {% endfor %}
+        </div>
+    </div>
+</section>

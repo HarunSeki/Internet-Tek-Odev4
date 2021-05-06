@@ -1,0 +1,33 @@
+<section class="page-section" id="schedule">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Konferans Takvimi</h2><br>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>07.05.2022</h4>
+                        <h4 class="subheading">Başlangıç Konuşması</h4>
+                        <h5 class="subheading">{{ sch.speaker[0] }}</h5>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            {% for sch in site.data.schedule %}
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>{{ sch.time }}</h4>
+                        <h4 class="subheading">{{ sch.title }}</h4>
+                        <h5 class="subheading">{{ sch.speaker }}</h5>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
